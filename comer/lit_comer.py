@@ -4,11 +4,11 @@ from typing import List
 import pytorch_lightning as pl
 import torch.optim as optim
 from torch import FloatTensor, LongTensor
+import torch
 
 from comer.datamodule import Batch, vocab
 from comer.model.comer import CoMER
-from comer.utils.utils import (ExpRateRecorder, Hypothesis, ce_loss,
-                               to_bi_tgt_out)
+from comer.utils.utils import ExpRateRecorder, Hypothesis, ce_loss, to_bi_tgt_out
 
 
 class LitCoMER(pl.LightningModule):
